@@ -1,0 +1,107 @@
+//1 2
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int sum(int a, int b);
+void swap(int* a, int* b);
+int main(void)
+{
+	int a = 3, b = 4;
+
+	printf("1¹ø %d \n", sum(a, b));
+	swap(&a, &b);
+	printf("%d %d \n", a, b);
+
+	print_3x();
+}
+int sum(int a, int b)
+{
+	return a + b;
+}
+void swap(int* a, int* b)
+{
+	int temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
+}
+
+//3
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int sum(int a, int b);
+void swap(int* a, int* b);
+int print_3x();
+int main(void)
+{
+	print_3x();
+}
+int sum(int a, int b)
+{
+	return a + b;
+}
+void swap(int* a, int* b)
+{
+	int temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
+}
+int print_3x()
+{
+	int i;
+	for (i = 0; i <= 100; i++) {
+		if (i % 3 == 0)
+			printf("%d ", i);
+	}
+	putchar('\n');
+	
+	return 0;
+}
+
+// 4 ¹ø
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	int i;
+	int *ary = (int*)malloc(sizeof(int) * 5);
+
+	ary[0] = 0;
+	ary[1] = 1;
+	ary[2] = 4;
+	ary[3] = 9;
+	ary[4] = 16;
+
+	for (i = 0; i < 5; i++) {
+		printf("%d ", ary[i]);
+	}
+
+	free(ary);
+
+	return 0;
+}
+
+//5¹ø
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct _coord {
+	int x;
+	int y;
+}coord;
+
+int main(void)
+{
+	coord a;
+	a= { 3, 4 };
+
+	printf("%d  %d", a.x , a.y);
+}
